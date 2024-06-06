@@ -1,9 +1,9 @@
 'use client';
 
-import { useState } from 'react'
-import { Menu } from 'lucide-react';
-import { useMedia } from 'react-use'
-import { usePathname, useRouter } from 'next/navigation';
+import { useState } from "react";
+import { Menu } from "lucide-react";
+import { useMedia } from "react-use";
+import { usePathname, useRouter } from "next/navigation";
 
 import { Button } from '@/components/ui/button';
 import NavButton from '@/components/NavButton';
@@ -41,7 +41,7 @@ const Navigation = () => {
         router.push(href);
         setIsOpened(false);
     };
-    console.log(isMobile)
+
     if (isMobile) {
         return (
             <Sheet open={isOpened} onOpenChange={setIsOpened}>
@@ -61,16 +61,14 @@ const Navigation = () => {
                         />
                     </Button>
                 </SheetTrigger>
-                <SheetContent
-                    side="left"
-                    className='px-4'
-                >
+                <SheetContent side="left" className='px-4'>
                     <nav className='flex flex-col gap-y-2 pt-6'>
                         {routs.map((route, index) => (
                             <Button
                                 variant={route.href === pathname ? 'secondary' : 'ghost'}
                                 key={index}
                                 onClick={() => onClick(route.href)}
+                                className="w-full justify-start"
                             >
                                 {route.label}
                             </Button>

@@ -6,7 +6,9 @@ import {
 import "./globals.css";
 
 import { cn } from "@/lib/utils"
+import { Toaster } from "@/components/ui/sonner";
 import { QueryProvider } from "@/providers/query-provider";
+import { SheetProvider } from "@/providers/sheet-provider";
  
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -33,6 +35,8 @@ export default function RootLayout({
           )}
         > 
           <QueryProvider>
+            <SheetProvider />
+            <Toaster />
             {children}
           </QueryProvider>
         </body>

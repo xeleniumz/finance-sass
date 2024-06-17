@@ -13,16 +13,15 @@ import {
 } from "@/components/ui/sheet";
 import { useCreateAccount } from "../api/use-create-account";
 
+const formSchema = insertAccountSchema.pick({
+    name: true,
+});
+type FormValues = z.input<typeof formSchema>;
+
 export const NewSheetAccount = () => {
+
     const { isOpen, onClose } = useNewAccount();
-
     const mutation = useCreateAccount();
-
-    const formSchema = insertAccountSchema.pick({
-        name: true,
-    });
-
-    type FormValues = z.input<typeof formSchema>;
 
     const onSubmit = (values: FormValues) => {
         mutation.mutate(values, {

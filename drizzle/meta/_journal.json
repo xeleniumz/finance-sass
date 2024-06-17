@@ -5,36 +5,8 @@
     {
       "idx": 0,
       "version": "7",
-      "when": 1718084273602,
-      "tag": "0000_open_baron_strucker",
-      "breakpoints": true
-    },
-    {
-      "idx": 1,
-      "version": "7",
-      "when": 1718085044093,
-      "tag": "0001_bitter_thor",
-      "breakpoints": true
-    },
-    {
-      "idx": 2,
-      "version": "7",
-      "when": 1718085075573,
-      "tag": "0002_sudden_talos",
-      "breakpoints": true
-    },
-    {
-      "idx": 3,
-      "version": "7",
-      "when": 1718338513464,
-      "tag": "0003_lying_gargoyle",
-      "breakpoints": true
-    },
-    {
-      "idx": 4,
-      "version": "7",
-      "when": 1718595347772,
-      "tag": "0004_fast_black_tom",
+      "when": 1718608124779,
+      "tag": "0000_square_puppet_master",
       "breakpoints": true
     }
   ]

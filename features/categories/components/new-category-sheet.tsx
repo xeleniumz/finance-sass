@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-import { insertCategoriesSchema } from "@/db/schema";
+import { insertCategorySchema } from "@/db/schema";
 import { useNewCategory } from "../hooks/use-new-category";
 import { CategoryForm } from "./category-form";
 
@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/sheet";
 import { useCreateCategory } from "../api/use-create-category";
 
-const formSchema = insertCategoriesSchema.pick({
+const formSchema = insertCategorySchema.pick({
     name: true,
 });
 type FormValues = z.input<typeof formSchema>;

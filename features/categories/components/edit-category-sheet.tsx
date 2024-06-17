@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-import { insertCategoriesSchema } from "@/db/schema";
+import { insertCategorySchema } from "@/db/schema";
 import { CategoryForm } from "./category-form";
 import { useOpenCategory } from "../hooks/use-open-category";
 import { useEditCategory } from "../api/use-edit-category";
@@ -20,7 +20,7 @@ import { Loader2 } from "lucide-react";
 
 
 
-const formSchema = insertCategoriesSchema.pick({
+const formSchema = insertCategorySchema.pick({
     name: true,
 });
 type FormValues = z.input<typeof formSchema>;

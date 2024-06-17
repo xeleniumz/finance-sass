@@ -34,6 +34,7 @@ interface DataTableProps<TData, TValue> {
     filterKey: string
     onDelete: (rows: Row<TData>[]) => void
     disabled?: boolean
+    tableName? : string
 }
 
 export function DataTable<TData, TValue>({
@@ -42,10 +43,11 @@ export function DataTable<TData, TValue>({
     filterKey,
     onDelete,
     disabled,
+    tableName,
 }: DataTableProps<TData, TValue>) {
     const [ConfirmDialog, confirm] = useConfirm(
         "Are you sure?",
-        "You are about to delete this transaction."
+        `You are about to bulk delete ${tableName} ?`,
     );
     const [sorting, setSorting] = React.useState<SortingState>([])
     const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(

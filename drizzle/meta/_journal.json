@@ -5,29 +5,8 @@
     {
       "idx": 0,
       "version": "7",
-      "when": 1718084273602,
-      "tag": "0000_open_baron_strucker",
-      "breakpoints": true
-    },
-    {
-      "idx": 1,
-      "version": "7",
-      "when": 1718085044093,
-      "tag": "0001_bitter_thor",
-      "breakpoints": true
-    },
-    {
-      "idx": 2,
-      "version": "7",
-      "when": 1718085075573,
-      "tag": "0002_sudden_talos",
-      "breakpoints": true
-    },
-    {
-      "idx": 3,
-      "version": "7",
-      "when": 1718338513464,
-      "tag": "0003_lying_gargoyle",
+      "when": 1718674364306,
+      "tag": "0000_tranquil_grandmaster",
       "breakpoints": true
     },
     {

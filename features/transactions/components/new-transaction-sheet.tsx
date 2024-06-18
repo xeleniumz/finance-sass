@@ -46,7 +46,7 @@ export const NewTransactionSheet = () => {
     const accountQuery = useGetAccounts();
     const accountMutation = useCreateAccount();
     const onCreateAccount = async (name: string) => accountMutation.mutate({ name });
-    const accountsOptions = (accountQuery.data || []).map((account) => ({
+    const accountOptions = (accountQuery.data || []).map((account) => ({
         label: account.name,
         value: account.id,
     }));
@@ -90,7 +90,7 @@ export const NewTransactionSheet = () => {
                             disabled={isPending}
                             categoryOptions={categoryOptions}
                             onCreateCategory={onCreateCategory}
-                            accountsOptions={accountsOptions}
+                            accountOptions={accountOptions}
                             onCreateAccount={onCreateAccount}
                         /> 
                     )

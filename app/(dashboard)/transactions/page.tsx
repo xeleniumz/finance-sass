@@ -12,7 +12,7 @@ import { useBulkDeleteTransactions } from "@/features/transactions/api/use-bulk-
 
 import {  columns } from "./columns";
 import { Skeleton } from "@/components/ui/skeleton";
-import { use } from "react";
+
 
  
 const Page = () => {
@@ -62,13 +62,13 @@ const Page = () => {
                     <DataTable
                         columns={columns}
                         data={transactions}
-                        filterKey="name"
+                        filterKey="payee"
                         onDelete={(row) => { 
                             const ids = row.map((r) => r.original.id);
                             deleteTransactions.mutate({ ids });
                         }}
                         disabled={isDisabled}
-                        tableName="accounts"
+                        tableName="transactions"
                     />
                 </CardContent>
           </Card>

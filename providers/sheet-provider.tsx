@@ -8,6 +8,7 @@ import { NewTransactionSheet } from "@/features/transactions/components/new-tran
 import { EditTransactionSheet } from "@/features/transactions/components/edit-transaction-sheet";
 
 
+
 export const SheetProvider = () => {
     const isMounted = useMountedState();
 
@@ -17,12 +18,17 @@ export const SheetProvider = () => {
                 <NewSheetAccount />
                 <EditAccountSheet />
 
+
                 <NewSheetCategory />
                 <EditCategorySheet />
 
                 <NewTransactionSheet />
                 <EditTransactionSheet />
          
+
+                <NewSheetCategory />
+                <EditCategorySheet />
+
             </>
         )
 }
